@@ -73,6 +73,7 @@
       <div id="start-div">
         <button id="start">START</button>
       </div>
+      <div id="inputField"></div>
     </div>
 
     <!-- Js section  -->
@@ -80,17 +81,20 @@
       var button = document.getElementById("start");
 
       button.addEventListener("click", () => {
-        let input1 = prompt("Enter your name: ");
-        let input2 = prompt("Enter the 2nd person's name: ");
+        // let input1 = prompt("Enter your name: ");
+        // let input2 = prompt("Enter the 2nd person's name: ");
+        // if (typeof input1 === "string" && typeof input2 === "string") {
+        //   alert(`${input1} and ${input2} are both strings`);
+        // } else {
+        //   alert(
+        //     "Input names not valid, please refresh app and follow the prompts"
+        //   );
+        // }
 
-        if (typeof input1 === "string" && typeof input2 === "string") {
-          alert(`${input1} and ${input2} are both strings`);
-        } else {
-          alert(
-            "Input names not valid, please refresh app and follow the prompts"
-          );
-        }
+        button.remove();
       });
+
+      // input field section
     </script>
   </body>
 </html>
