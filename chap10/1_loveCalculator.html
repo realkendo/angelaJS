@@ -74,6 +74,7 @@
         <button id="start">START</button>
       </div>
       <div id="inputField"></div>
+      <div id="result"></div>
     </div>
 
     <!-- Js section  -->
@@ -91,7 +92,32 @@
         //   );
         // }
 
+        // removing button from the DOM
         button.remove();
+
+        // selecting the input field div
+        let inputField = document.getElementById("inputField");
+        inputField.style.height = "30vh";
+
+        // creating elements
+        var loverNameInput1 = document.createElement("input");
+        var loverNameInput2 = document.createElement("input");
+        let resultBtn = document.createElement("button");
+
+        //adding properties to elements
+        loverNameInput1.setAttribute.type = "text";
+        loverNameInput2.setAttribute.type = "text";
+
+        loverNameInput1.setAttribute.placeholder = "First Lover Name";
+        loverNameInput2.setAttribute.placeholder = "Second Lover Name";
+
+        // property for result button element
+        resultBtn.innerHTML = "Calculate";
+
+        // adding child to parent element
+        inputField.appendChild(loverNameInput1);
+        inputField.appendChild(loverNameInput2);
+        inputField.appendChild(resultBtn);
       });
 
       // input field section
