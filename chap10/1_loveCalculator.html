@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --pinky: #ff6969;
+        --purp: #6d0a9f;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-image: url("./luvCal.png");
+        background-size: contain;
+      }
+
+      #container {
+        padding: 10px 10px;
+        margin: 5px 5px;
+        border-radius: 5px;
+        background: linear-gradient(to right, rgb(43, 3, 70), rgb(136, 0, 63));
+      }
+
+      #main-heading {
+        padding: 5px 5px;
+        border-radius: 3px;
+        font-family: "Jokerman Regular";
+        background: linear-gradient(to bottom, var(--pinky), var(--purp));
+        color: bisque;
+      }
+
+      #sub-heading {
+        text-align: center;
+        background-color: #000;
+        font-family: "Oswald";
+      }
+
+      #start-div {
+        display: grid;
+        place-items: center;
+      }
+
+      #start {
+        font-family: "Yellowtail";
+        font-weight: bold;
+        background: linear-gradient(to bottom, var(--pinky), var(--purp));
+        width: 80px;
+        height: 30px;
+        border-radius: 15px;
+      }
+
+      #start:hover {
+        color: #fff;
+        font-size: 15px;
+      }
+
+      #inputField {
+        background-color: white;
+      }
+    </style>
+    <title>Love calculator</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="main-heading">Welcome to my love calculator</h1>
+      <h2 id="sub-heading">please follow the instructions to use it</h2>
+      <div id="start-div">
+        <button id="start">START</button>
+      </div>
+    </div>
+
+    <!-- Js section  -->
+    <script>
+      var button = document.getElementById("start");
+
+      button.addEventListener("click", () => {
+        let input1 = prompt("Enter your name: ");
+        let input2 = prompt("Enter the 2nd person's name: ");
+
+        if (typeof input1 === "string" && typeof input2 === "string") {
+          alert(`${input1} and ${input2} are both strings`);
+        } else {
+          alert(
+            "Input names not valid, please refresh app and follow the prompts"
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
