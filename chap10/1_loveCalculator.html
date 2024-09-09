@@ -73,6 +73,11 @@
         border: 1px solid var(--pinky);
       }
 
+      #name1:focus {
+        outline: none;
+        border: 1px solid var(--purp);
+      }
+
       .calBtn {
         background: linear-gradient(to right, var(--pinky), var(--purp));
         color: #fff;
@@ -116,6 +121,18 @@
         input1.setAttribute("type", "text");
         input1.setAttribute("id", "name1");
         input1.setAttribute("placeholder", "enter name of first lover");
+
+        //creating a label and input element for -1
+        // label -1
+        const label2 = document.createElement("label");
+        label1.setAttribute("for", "name2");
+        label1.textContent = "myname";
+
+        //input -1
+        const input2 = document.createElement("input");
+        input2.setAttribute("type", "text");
+        input2.setAttribute("id", "name2");
+        input2.setAttribute("placeholder", "enter name of other lover");
 
         //result button element
         const resultBtn = document.createElement("button");
