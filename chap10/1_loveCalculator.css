@@ -1,0 +1,99 @@
+:root {
+  --pinky: #ff6969;
+  --purp: #6d0a9f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-image: url("./luvCal.png");
+  background-size: contain;
+}
+
+#container {
+  padding: 10px 10px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgb(43, 3, 70), rgb(136, 0, 63));
+}
+
+#main-heading {
+  padding: 5px 5px;
+  border-radius: 3px;
+  font-family: "Jokerman Regular";
+  background: linear-gradient(to bottom, var(--pinky), var(--purp));
+  color: bisque;
+}
+
+#sub-heading {
+  text-align: center;
+  background-color: rgb(25, 2, 41);
+  font-family: "Oswald";
+}
+
+#start-div {
+  display: grid;
+  place-items: center;
+}
+
+#start {
+  font-family: "Yellowtail";
+  font-weight: bold;
+  background: linear-gradient(to bottom, var(--pinky), var(--purp));
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  transition: color 0.5s ease, font-size 1s ease;
+}
+
+#start:hover {
+  color: #fff;
+  font-size: 15px;
+}
+
+#inputField {
+  background: radial-gradient(
+    circle at center,
+    rgb(243, 127, 147),
+    bisque,
+    white
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  padding: 3px 3px;
+  margin: 5px 5px;
+  text-align: center;
+  color: var(--pinky);
+  border-radius: 10px;
+  border: 1px solid var(--pinky);
+  height: 30px;
+  margin: 10px 2px;
+  transition: border 1s ease;
+}
+
+.inputs:focus {
+  outline: none;
+  border: 2px solid var(--purp);
+}
+
+.calBtn {
+  background-image: linear-gradient(to right, var(--pinky), var(--purp));
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 5px;
+  height: 20px;
+  transition: background-image 3s ease-in-out;
+}
+
+.calBtn:hover {
+  background-image: linear-gradient(to right, var(--purp), var(--pinky));
+}
