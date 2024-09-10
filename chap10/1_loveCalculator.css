@@ -97,3 +97,12 @@ body {
 .calBtn:hover {
   background-image: linear-gradient(to right, var(--purp), var(--pinky));
 }
+
+#resultField {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: bisque;
+  font-size: x-large;
+  max-height: fit-content;
+}
