@@ -41,7 +41,7 @@ window.onload = () => {
 
       // adding attributes
 
-      resultValue.innerHTML = 4;
+      resultValue.innerHTML = `The love percentage has been calculated to be: ${4}%`;
 
       resultVariable.appendChild(resultValue);
       resultField.appendChild(resultVariable);
