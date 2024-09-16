@@ -106,3 +106,14 @@ body {
   font-size: x-large;
   max-height: fit-content;
 }
+
+.refreshDiv{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultDiv button{
+  width: 60px;
+
+}

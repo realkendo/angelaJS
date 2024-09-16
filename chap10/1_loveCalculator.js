@@ -35,16 +35,43 @@ window.onload = () => {
 
     // click event listener
     resultBtn.addEventListener("click", () => {
-      let resultVariable = document.createElement("div");
-      let resultValue = document.createElement("h4");
-      let resultField = document.getElementById("resultField");
 
-      // adding attributes
+      // creating a refresh button
+      let refreshDiv = document.createElement("div");
+      let refreshBtn = document.createElement('button');
+      refreshBtn.innerText = "Refresh";
+      refreshBtn.classList.add("calBtn");
 
-      resultValue.innerHTML = `The love percentage has been calculated to be: ${4}%`;
 
-      resultVariable.appendChild(resultValue);
-      resultField.appendChild(resultVariable);
+      if(input1.value && input2.value !== ""){
+              // 
+        let resultDiv = document.createElement("div");
+        let resultValue = document.createElement("h4");
+        let resultField = document.getElementById("resultField");
+
+        resultDiv.classList.add("resultDiv");
+
+        let num = Math.random();
+        num = num * 100;
+        num = Math.floor(num) +1;
+        console.log(num);
+
+        // adding attributes
+        resultValue.innerHTML = `The love percentage has been calculated to be: ${num}%`;
+
+        // inserting the value into the variable
+        resultDiv.appendChild(resultValue);
+        // inserting the refresh button into its div
+        refreshDiv.appendChild(refreshBtn);
+        // 
+        resultDiv.appendChild(refreshDiv);
+        resultField.appendChild(resultDiv);
+      }else{
+        alert("Empty Input, Please fill in a value");
+      }
     });
+
+
+     
   });
 };
