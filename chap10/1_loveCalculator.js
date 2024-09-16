@@ -42,31 +42,47 @@ window.onload = () => {
       refreshBtn.innerText = "Refresh";
       refreshBtn.classList.add("calBtn");
 
+      // reloading the page when refresh is clicked
+      refreshBtn.addEventListener("click",()=>{
+        location.reload();
+      })
 
+      //display conditions 
       if(input1.value && input2.value !== ""){
-              // 
-        let resultDiv = document.createElement("div");
-        let resultValue = document.createElement("h4");
-        let resultField = document.getElementById("resultField");
+        const elementChecker = ()=>{
+          return true;
+        }
+        if(elementChecker()){
+          // assigning elements to a variable
+          let resultDiv = document.createElement("div");
+          let resultValue = document.createElement("h4");
+          let resultField = document.getElementById("resultField");
 
-        resultDiv.classList.add("resultDiv");
+          // adding a class to the result div
+          resultDiv.classList.add("resultDiv");
 
-        let num = Math.random();
-        num = num * 100;
-        num = Math.floor(num) +1;
-        console.log(num);
+          
+          // inserting the value into the variable
+          resultDiv.appendChild(resultValue);
+          // inserting the refresh button into its div
+          refreshDiv.appendChild(refreshBtn);
+          // inserting the refresh button div to the result div
+          resultDiv.appendChild(refreshDiv);
+          // inserting the result div into the result field
+          resultField.appendChild(resultDiv);
 
-        // adding attributes
-        resultValue.innerHTML = `The love percentage has been calculated to be: ${num}%`;
+          // the random value generator
+          let num = Math.random();
+          num = num * 100;
+          num = Math.floor(num) +1;
+          console.log(num);
 
-        // inserting the value into the variable
-        resultDiv.appendChild(resultValue);
-        // inserting the refresh button into its div
-        refreshDiv.appendChild(refreshBtn);
-        // 
-        resultDiv.appendChild(refreshDiv);
-        resultField.appendChild(resultDiv);
+          // adding attributes
+          resultValue.innerHTML = `The love percentage has been calculated to be: ${num}%`;
+
+        }
       }else{
+        // message for an empty input
         alert("Empty Input, Please fill in a value");
       }
     });
