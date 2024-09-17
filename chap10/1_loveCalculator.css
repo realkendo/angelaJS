@@ -111,9 +111,11 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 
 .resultDiv button{
-  width: 60px;
+  margin-left: 30%;
+  width: 100px;
 
 }
