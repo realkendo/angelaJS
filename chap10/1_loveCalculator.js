@@ -71,14 +71,18 @@ window.onload = () => {
           // inserting the result div into the result field
           resultField.appendChild(resultDiv);
 
-          // the random value generator
-          let num = Math.random();
-          num = num * 100;
-          num = Math.floor(num) +1;
-          console.log(num);
+          // condition for final results
+          if(resultDiv){
+              
+            // the random value generator
+            let num = Math.random();
+            num = num * 100;
+            num = Math.floor(num) +1;
+            console.log(num);
 
-          // adding attributes
-          resultValue.innerHTML = `The love percentage has been calculated to be: ${num}%`;
+            // adding attributes
+            resultValue.innerHTML = `The love percentage has been calculated to be: ${num}%`;
+          }
 
         }
       }else{
